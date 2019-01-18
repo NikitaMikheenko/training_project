@@ -1,0 +1,56 @@
+﻿@model Common.Note
+
+@{
+    Layout = ViewBag.Layout;
+}
+
+<div id="note">
+    @if (ViewBag.ShowUser && Model.User.Login != FormsAuthentication.Decrypt(HttpContext.Current.Request.Cookies[FormsAuthentication.FormsCookieName].Value).Name)
+    {
+        <lable>User: @Model.User.Login (@Model.User.Role.Name)</lable>
+    }
+
+    <div>
+        <label>Name: @Model.Name</label>
+    </div>
+    
+    <div>
+        <label>Date: @Model.Date.Year-@Model.Date.Month-@Model.Date.Day</label>
+    </div>
+    
+    <div>
+        <label>Category: @Model.Category.Name</label>
+    </div>
+    
+    <div>
+        <span>Linked notes:</span>
+        <table>
+            <tr>
+                <th>
+                    Note name
+                </th>
+                <th>
+                    Date
+                </th>
+                <th>
+                    Category
+                </th>
+            </tr>
+            @if (Model.LinkedNotes != null)
+            {
+                foreach (var item in Model.LinkedNotes)
+                {
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>@item.Date.Year-@item.Date.Month-@item.Date.Day</td>
+                        <td>@item.Category.Name</td>
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+    
+    <div>
+        <img src="@Model.Imglink" />
+    </div>
+</div>

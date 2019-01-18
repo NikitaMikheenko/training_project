@@ -1,0 +1,108 @@
+﻿@model Common.SearchModel
+
+@{
+    Layout = "~/Views/Shared/AdvLayout.cshtml";
+}
+
+<div>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        @Html.EditorFor(model => model.RequestText)
+
+        <select name="SearchType">
+            @if (Model.SearchType == 0)
+            {
+                <option value="0" selected>Note name</option>
+            }
+            else
+            {
+                <option value="0">Note name</option>
+            }
+            @if (Model.SearchType == 1)
+            {
+                <option value="1">Note date (yyyy-mm-dd)</option>
+            }
+            else
+            {
+                <option value="1">Note date (yyyy-mm-dd)</option>
+            }
+            @if (Model.SearchType == 2)
+            {
+                <option value="2">Category</option>
+            }
+            else
+            {
+                <option value="2">Category</option>
+            }
+            @if (Model.SearchType == 3)
+            {
+                <option value="3">User login</option>
+            }
+            else
+            {
+                <option value="3">User login</option>
+            }
+        </select>
+
+        <input type="submit" value="Search" />
+    }
+
+    @if (Model.NotesInfo != null)
+    {
+        <table>
+            <tr>
+                <th>
+                    Note name
+                </th>
+                <th>
+                    Date
+                </th>
+                <th>
+                    Category
+                </th>
+                <th>
+                    User login
+                </th>
+                <th>
+                    User role
+                </th>
+            </tr>
+            @foreach (var item in Model.NotesInfo)
+            {
+                <tr>
+                    <td>
+                        <a href="~/Note/ShowNote/?noteId=@item.Id">@item.Name</a>
+                    </td>
+                    <td>
+                        @item.Date.Month-@item.Date.Day-@item.Date.Year
+                    </td>
+                    <td>
+                        @item.Category.Name
+                    </td>
+                    @if (item.User != null)
+                    {
+                        <td>
+                            @item.User.Login
+                        </td>
+                        <td>
+                            @item.User.Role.Name
+                        </td>
+                    }
+                    else
+                    {
+                        <td></td>
+                        <td></td>
+                    }
+                    <td>
+                        <a href="~/Note/EditNote/?noteId=@item.Id">Edit</a>
+                    </td>
+                    <td>
+                        <a href="~/Note/DeleteNote/?id=@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </table>
+    }
+</div>

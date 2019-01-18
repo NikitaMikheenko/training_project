@@ -1,0 +1,24 @@
+﻿@model List<Common.Category>
+
+@{
+    Layout = "~/Views/Shared/AdvLayout.cshtml";
+}
+
+<a href="~/Category/AddCategory">Add Category</a>
+
+<table>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <a href="~/Search/AdvSearch/?searchType=2&requestText=@item.Name">@item.Name</a>
+            </td>
+            <td>
+                <a href="~/Category/EditCategory/?id=@item.Id">Edit</a>
+            </td>
+            <td>
+                <a href="~/Category/DeleteCategory/?id=@item.Id">Delete</a>
+            </td>
+        </tr>
+    }
+</table>

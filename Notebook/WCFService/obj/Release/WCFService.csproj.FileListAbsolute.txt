@@ -1,0 +1,7 @@
+D:\Epam\training_project\Notebook\WCFService\bin\WCFService.dll.config
+D:\Epam\training_project\Notebook\WCFService\bin\WCFService.dll
+D:\Epam\training_project\Notebook\WCFService\bin\WCFService.pdb
+D:\Epam\training_project\Notebook\WCFService\obj\Release\WCFService.csprojAssemblyReference.cache
+D:\Epam\training_project\Notebook\WCFService\obj\Release\WCFService.csproj.CoreCompileInputs.cache
+D:\Epam\training_project\Notebook\WCFService\obj\Release\WCFService.dll
+D:\Epam\training_project\Notebook\WCFService\obj\Release\WCFService.pdb

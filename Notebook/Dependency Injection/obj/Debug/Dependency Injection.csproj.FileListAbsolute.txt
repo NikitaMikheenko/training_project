@@ -1,0 +1,18 @@
+D:\Epam\training_project\Notebook\Dependency Injection\bin\Debug\Dependency Injection.dll
+D:\Epam\training_project\Notebook\Dependency Injection\bin\Debug\Dependency Injection.pdb
+D:\Epam\training_project\Notebook\Dependency Injection\bin\Debug\BusinessLogic.dll
+D:\Epam\training_project\Notebook\Dependency Injection\bin\Debug\Common.dll
+D:\Epam\training_project\Notebook\Dependency Injection\bin\Debug\DataAccess.dll
+D:\Epam\training_project\Notebook\Dependency Injection\bin\Debug\StructureMap.dll
+D:\Epam\training_project\Notebook\Dependency Injection\bin\Debug\System.Web.Helpers.dll
+D:\Epam\training_project\Notebook\Dependency Injection\bin\Debug\BusinessLogic.pdb
+D:\Epam\training_project\Notebook\Dependency Injection\bin\Debug\Common.pdb
+D:\Epam\training_project\Notebook\Dependency Injection\bin\Debug\DataAccess.pdb
+D:\Epam\training_project\Notebook\Dependency Injection\obj\Debug\Dependency Injection.csprojAssemblyReference.cache
+D:\Epam\training_project\Notebook\Dependency Injection\obj\Debug\Dependency Injection.csproj.CoreCompileInputs.cache
+D:\Epam\training_project\Notebook\Dependency Injection\obj\Debug\Dependency Injection.csproj.CopyComplete
+D:\Epam\training_project\Notebook\Dependency Injection\obj\Debug\Dependency Injection.dll
+D:\Epam\training_project\Notebook\Dependency Injection\obj\Debug\Dependency Injection.pdb
+D:\Epam\training_project\Notebook\Dependency Injection\bin\Debug\StructureMap.xml
+D:\Epam\training_project\Notebook\Dependency Injection\bin\Debug\Dependency Injection.dll.config
+D:\Epam\training_project\Notebook\Dependency Injection\bin\Debug\BusinessLogic.dll.config

@@ -1,0 +1,50 @@
+﻿@model Common.UserEditModel
+
+@{
+    Layout = ViewBag.Layout;
+}
+
+<div>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        @Html.ValidationSummary(true, "", new { @class = "" })
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div>
+            @Html.LabelFor(model => model.Login, new { @class = "" })
+            <div>
+                @Html.EditorFor(model => model.Login)
+                @Html.ValidationMessageFor(model => model.Login, "", new { @class = "" })
+            </div>
+        </div>
+
+        <div>
+            @Html.LabelFor(model => model.Password, new { @class = "" })
+            <div>
+                @Html.EditorFor(model => model.Password)
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "" })
+            </div>
+        </div>
+
+        <div>
+            <label class="text">Password confirmation</label>
+            <div>
+                @Html.EditorFor(model => model.ConfirmPassword)
+                @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "" })
+            </div>
+        </div>
+
+        Html.HiddenFor(model => model.RoleId);
+
+        <div>
+            <input type="submit" value="Edit" />
+        </div>
+    }
+</div>
+
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

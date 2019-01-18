@@ -1,0 +1,48 @@
+﻿#menu {
+    border-bottom: 1px solid #000000;
+    background-color: #2F4F4F;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+#menu a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: "Arial";
+    font-size: 20px;
+    display: block;
+    padding: 0px 50px;
+    line-height: 2;
+}
+
+#menu span {
+    color: #FFFFFF;
+    font-family: "Arial";
+    font-size: 20px;
+    display: block;
+    padding: 0px 50px;
+    line-height: 2;
+}
+
+#menu li.list {
+    display: inline-block;
+}
+
+#menu ul.dropdown {
+    border: 1px solid #000000;
+    background-color: #2F4F4F;
+    list-style: none;
+    position: absolute;
+    display: none;
+    padding: 0px;
+}
+
+#menu li:hover ul.dropdown {
+    display: block;
+}
+
+#menu a:hover {
+    text-decoration: underline;
+}

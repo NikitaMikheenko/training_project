@@ -1,0 +1,11 @@
+D:\Epam\training_project\Notebook\DataAccess\bin\Debug\DataAccess.dll
+D:\Epam\training_project\Notebook\DataAccess\bin\Debug\DataAccess.pdb
+D:\Epam\training_project\Notebook\DataAccess\bin\Debug\Common.dll
+D:\Epam\training_project\Notebook\DataAccess\bin\Debug\Common.pdb
+D:\Epam\training_project\Notebook\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
+D:\Epam\training_project\Notebook\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+D:\Epam\training_project\Notebook\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+D:\Epam\training_project\Notebook\DataAccess\obj\Debug\DataAccess.dll
+D:\Epam\training_project\Notebook\DataAccess\obj\Debug\DataAccess.pdb
+D:\Epam\training_project\Notebook\DataAccess\bin\Debug\StructureMap.dll
+D:\Epam\training_project\Notebook\DataAccess\bin\Debug\StructureMap.xml

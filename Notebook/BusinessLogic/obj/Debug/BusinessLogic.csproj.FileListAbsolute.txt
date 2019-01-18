@@ -1,0 +1,12 @@
+D:\Epam\training_project\Notebook\BusinessLogic\bin\Debug\BusinessLogic.dll
+D:\Epam\training_project\Notebook\BusinessLogic\bin\Debug\BusinessLogic.pdb
+D:\Epam\training_project\Notebook\BusinessLogic\bin\Debug\Common.dll
+D:\Epam\training_project\Notebook\BusinessLogic\bin\Debug\DataAccess.dll
+D:\Epam\training_project\Notebook\BusinessLogic\bin\Debug\System.Web.Helpers.dll
+D:\Epam\training_project\Notebook\BusinessLogic\bin\Debug\Common.pdb
+D:\Epam\training_project\Notebook\BusinessLogic\bin\Debug\DataAccess.pdb
+D:\Epam\training_project\Notebook\BusinessLogic\obj\Debug\BusinessLogic.csprojAssemblyReference.cache
+D:\Epam\training_project\Notebook\BusinessLogic\obj\Debug\BusinessLogic.csproj.CoreCompileInputs.cache
+D:\Epam\training_project\Notebook\BusinessLogic\obj\Debug\BusinessLogic.csproj.CopyComplete
+D:\Epam\training_project\Notebook\BusinessLogic\obj\Debug\BusinessLogic.dll
+D:\Epam\training_project\Notebook\BusinessLogic\obj\Debug\BusinessLogic.pdb

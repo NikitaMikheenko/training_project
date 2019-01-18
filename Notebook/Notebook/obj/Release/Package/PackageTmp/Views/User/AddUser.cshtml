@@ -1,0 +1,56 @@
+﻿@model Common.UserEditModel
+
+@{
+    Layout = "~/Views/Shared/AdvLayout.cshtml";
+}
+
+<div>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        @Html.ValidationSummary(true, "", new { @class = "" })
+
+        <div>
+            @Html.LabelFor(model => model.Login, new { @class = "" })
+            <div>
+                @Html.EditorFor(model => model.Login)
+                @Html.ValidationMessageFor(model => model.Login, "", new { @class = "" })
+            </div>
+        </div>
+
+        <div>
+            @Html.LabelFor(model => model.Password, new { @class = "" })
+            <div>
+                @Html.EditorFor(model => model.Password)
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "" })
+            </div>
+        </div>
+
+        <div>
+            <label class="text">Password confirmation</label>
+            <div>
+                @Html.EditorFor(model => model.ConfirmPassword)
+                @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "" })
+            </div>
+        </div>
+
+        <div>
+            <select name="RoleId">
+                @foreach (var item in Model.Roles)
+                {
+                    <option value="@item.Id">@item.Name</option>
+                    <lable>@item.Name</lable>
+                }
+            </select>
+        </div>
+
+        <div>
+            <input type="submit" value="Add" />
+        </div>
+    }
+</div>
+
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

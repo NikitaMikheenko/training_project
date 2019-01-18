@@ -1,0 +1,59 @@
+﻿@model Common.RegistrationModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Registration</title>
+    <link href="~/Content/Login&Registration.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="login_registration">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            @Html.ValidationSummary(true, "", new { @class = "valid_message" })
+
+            <div>
+                @Html.LabelFor(model => model.Login, new { @class = "text" })
+                <div>
+                    @Html.EditorFor(model => model.Login)
+                    <div>
+                        @Html.ValidationMessageFor(model => model.Login, "", new { @class = "error_text" })
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                @Html.LabelFor(model => model.Password, new { @class = "text" })
+                <div>
+                    @Html.EditorFor(model => model.Password)
+                    <div>
+                        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "error_text" })
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <label class="text">Password confirmation</label>
+                <div>
+                    @Html.EditorFor(model => model.ConfirmPassword)
+                    <div>
+                        @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "error_text" })
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <input type="submit" value="Register" class="button" />
+            </div>
+        }
+    </div>
+
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>

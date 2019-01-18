@@ -1,0 +1,17 @@
+﻿#error {
+    border: 1px solid #000000;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding: 40px;
+    background-color: #2F4F4F;
+    text-align: center;
+}
+
+#error .text {
+    color: red;
+    line-height: 2;
+    font-family: "Arial";
+    font-size: 14px;
+}

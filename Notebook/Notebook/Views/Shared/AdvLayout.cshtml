@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Main.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/Menu.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="main">
+        <ul id="menu">
+            <li class="list"><a href="~/Note/AddNote">Add Note</a></li>
+            <li class="list"><a href="~/Note/Notes">Notes</a></li>
+            <li class="list"><a href="~/Search/AdvSearch">Search</a></li>
+            <li class="list"><a href="~/Category/Categories">Categories</a></li>
+            <li class="list"><a href="~/User/Users">Users</a></li>
+            <li class="list">
+                <span>@FormsAuthentication.Decrypt(HttpContext.Current.Request.Cookies[FormsAuthentication.FormsCookieName].Value).Name</span>
+                <ul class="dropdown">
+                    <li><a href="~/Account/AccountEdit">Edit account</a></li>
+                    <li><a href="~/Account/SignOut">Sign out</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div>
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>

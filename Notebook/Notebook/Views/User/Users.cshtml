@@ -1,0 +1,38 @@
+﻿@model List<Common.UserInfoModel>
+
+@{
+    Layout = "~/Views/Shared/AdvLayout.cshtml";
+}
+
+<a href="~/User/AddUser">Add user</a>
+
+<table>
+    <tr>
+        <th>
+            Login
+        </th>
+        <th>
+            Role
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <a href="~/Search/AdvSearch/?searchType=3&requestText=@item.Login">@item.Login</a>
+            </td>
+            <td>
+                @item.Role.Name
+            </td>
+            @if (ViewBag.AllowEdit)
+            {
+                <td>
+                    <a href="~/User/EditUser/?editUserLogin=@item.Login">Edit</a>
+                </td>
+                <td>
+                    <a href="~/User/DeleteUser/?userId=@item.Id">Delete</a>
+                </td>
+            }
+        </tr>
+    }
+</table>

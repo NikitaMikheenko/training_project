@@ -1,0 +1,42 @@
+﻿@model List<Common.NoteInfoModel>
+
+@{
+    Layout = ViewBag.Layout;
+}
+
+<table>
+    <tr>
+        <th>
+            Note name
+        </th>
+        <th>
+            Date
+        </th>
+        <th>
+            Category
+        </th>
+    </tr>
+    @if (Model != null)
+    {
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <a href="~/Note/ShowNote/?noteId=@item.Id">@item.Name</a>
+                </td>
+                <td>
+                    <a href="~/Search/@ViewBag.SearchType/?searchType=1&requestText=@item.Date.Year-@item.Date.Month-@item.Date.Day">@item.Date.Year-@item.Date.Month-@item.Date.Day</a>
+                </td>
+                <td>
+                    <a href="~/Search/@ViewBag.SearchType/?searchType=2&requestText=@item.Category.Name">@item.Category.Name</a>
+                </td>
+                <td>
+                    <a href="~/Note/EditNote/?noteId=@item.Id">Edit</a>
+                </td>
+                <td>
+                    <a href="~/Note/DeleteNote/?id=@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    }
+</table>

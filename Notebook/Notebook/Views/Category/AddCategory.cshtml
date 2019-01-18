@@ -1,0 +1,32 @@
+﻿@model Common.Category
+
+@{
+    Layout = "~/Views/Shared/AdvLayout.cshtml";
+}
+
+<div>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        @Html.ValidationSummary(true, "", new { @class = "" })
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div>
+            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "" })
+            <div>
+                @Html.EditorFor(model => model.Name)
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "" })
+            </div>
+        </div>
+
+        <div>
+            <input type="submit" value="Add" />
+        </div>
+    }
+</div>
+
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
